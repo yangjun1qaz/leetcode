@@ -15,6 +15,7 @@ public class HashCode4 {
         char[] chars1 = ransomNote.toCharArray();
         char[] chars2 = magazine.toCharArray();
 
+
         for (char c1 : chars1) {
             a[c1 - 'a'] += 1;
         }
