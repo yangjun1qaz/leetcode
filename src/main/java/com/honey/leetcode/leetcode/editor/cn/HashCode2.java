@@ -44,6 +44,5 @@ public class HashCode2 {
     public static void main(String[] args) {
         int[] mun1={1,2,2,1};
         int[] mun2={2,2};
-        intersection
     }
 }
