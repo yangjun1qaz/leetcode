@@ -55,8 +55,9 @@ public class TestStream {
 
         System.out.println("使用 Java 8: ");
         System.out.println("列表: " +strings);
+        strings.stream().filter(string->!string.isEmpty()).count();
 
-        count = strings.stream().filter(string->string.isEmpty()).count();
+
         System.out.println("空字符串数量为: " + count);
 
         count = strings.stream().filter(string -> string.length() == 3).count();

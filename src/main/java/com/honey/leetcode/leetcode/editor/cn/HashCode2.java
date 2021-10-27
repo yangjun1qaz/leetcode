@@ -1,6 +1,7 @@
 package com.honey.leetcode.leetcode.editor.cn;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * @author ：Brayden
@@ -30,19 +31,28 @@ public class HashCode2 {
                hash2.add(nums2[i]);
            }
         }
-        int i=0;
-        int[] result=new int[hash2.size()];
-        Iterator<Integer> iterator = hash2.iterator();
-        while(iterator.hasNext()){
-            result[i]=iterator.next();
-            i++;
-        }
-
-        return result ;
+        int[] ints = hash2.stream().mapToInt(Integer::intValue).toArray();
+        return ints ;
     }
 
     public static void main(String[] args) {
         int[] mun1={1,2,2,1};
         int[] mun2={2,2};
+
     }
+
+    public static void test() {
+        List<? extends Number> l1 = new ArrayList<>();
+         //l1.add(1);// 会报错
+
+        List<? super Number> l2 = new ArrayList<>();
+        // Number n = l2.get(1); //会报错
+        l2.add(1);
+        l2.add(2);
+        l2.add(0.11);
+        for(Object n: l2) {
+            System.out.println(n.toString());
+        }
+    }
+
 }
