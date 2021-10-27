@@ -41,6 +41,7 @@ public class HashCode2 {
 
     }
 
+
     public static void test() {
         List<? extends Number> l1 = new ArrayList<>();
          //l1.add(1);// 会报错
