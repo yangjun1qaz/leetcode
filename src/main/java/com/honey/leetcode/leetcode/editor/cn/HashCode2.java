@@ -39,6 +39,7 @@ public class HashCode2 {
         int[] mun1={1,2,2,1};
         int[] mun2={2,2};
 
+
     }
 
 
