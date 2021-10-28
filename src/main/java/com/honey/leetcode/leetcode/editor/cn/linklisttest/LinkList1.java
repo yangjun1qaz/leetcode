@@ -1,4 +1,5 @@
-package com.honey.leetcode.leetcode.editor.cn;
+package com.honey.leetcode.leetcode.editor.cn.linklisttest;
+
 
 /**
  * @author ：Brayden
@@ -21,5 +22,22 @@ public class LinkList1 {
             cur=cur.next;
         }
         return dummy.next;
+    }
+}
+
+class ListNode {
+    int val;
+    ListNode next;
+
+    ListNode() {
+    }
+
+    ListNode(int val) {
+        this.val = val;
+    }
+
+    ListNode(int val, ListNode next) {
+        this.val = val;
+        this.next = next;
     }
 }

@@ -1,6 +1,4 @@
-package com.honey.leetcode.leetcode.editor.cn;
-
-import java.util.Arrays;
+package com.honey.leetcode.leetcode.editor.cn.stringtest;
 
 /**
  * @author ：Brayden
@@ -14,27 +12,28 @@ import java.util.Arrays;
  */
 public class String2 {
     public String reverseStr(String s, int k) {
-        int n = s.length();
-        char[] arr = s.toCharArray();
-        for (int i = 0; i < n; i += 2 * k) {
-            reverse(arr, i, Math.min(i + k, n) - 1);
-        }
-        return new String(arr);
 
+        int len = s.length();
+        char[] chars = s.toCharArray();
+        for (int i = 0; i < len; i += 2 * k) {
+            rever(chars,i,Math.min(i+k,len)-1);
+        }
+       return  new String(chars);
     }
 
-    public void reverse(char[] arr, int left, int right) {
-        while (left < right) {
-            char temp = arr[left];
-            arr[left] = arr[right];
-            arr[right] = temp;
-            left++;
-            right--;
+    private void rever(char[] chars, int l, int r) {
+        while (l < r) {
+            char temp = chars[l];
+            chars[l] = chars[r];
+            chars[r] = temp;
+            l++;
+            r--;
         }
     }
+
 
     public static void main(String[] args) {
         String2 string2 = new String2();
-        string2.reverseStr("abcd23",2);
+        string2.reverseStr("abcd23", 2);
     }
 }

@@ -1,4 +1,4 @@
-package com.honey.leetcode.leetcode.editor.cn;
+package com.honey.leetcode.leetcode.editor.cn.hashcodetest;
 
 import java.util.ArrayList;
 
