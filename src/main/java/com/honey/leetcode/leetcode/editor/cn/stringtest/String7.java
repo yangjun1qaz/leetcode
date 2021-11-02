@@ -3,35 +3,40 @@ package com.honey.leetcode.leetcode.editor.cn.stringtest;
 /**
  * @author ：Brayden
  * @date ：Created in 2021/11/1 15:06
- * @description：
+ * @description：题目：28. 实现 strStr() KMP
  * @modified By：
  * @version:
  */
 public class String7 {
     public static int strStr(String haystack, String needle) {
-        int n = haystack.length(), m = needle.length();
-        if (m == 0) {
+        char[] m = haystack.toCharArray();
+        char[] p = needle.toCharArray();
+        if (p.length == 0) {
             return 0;
         }
-        int[] pi = new int[m];
-        for (int i = 1, j = 0; i < m; i++) {
-            while (j > 0 && needle.charAt(i) != needle.charAt(j)) {
+        int[] pi = new int[p.length];
+        //求next数组
+
+        for (int i = 1, j = 0; i < p.length; i++) {
+            while (j > 0 && p[i] != p[j]) {
                 j = pi[j - 1];
             }
-            if (needle.charAt(i) == needle.charAt(j)) {
+
+            if (p[i] == p[j]) {
                 j++;
             }
             pi[i] = j;
         }
-        for (int i = 0, j = 0; i < n; i++) {
-            while (j > 0 && haystack.charAt(i) != needle.charAt(j)) {
+
+        for (int i = 0, j = 0; i < m.length; i++) {
+            while (j > 0 && m[i] != p[j]) {
                 j = pi[j - 1];
             }
-            if (haystack.charAt(i) == needle.charAt(j)) {
+            if (m[i] == p[j]) {
                 j++;
             }
-            if (j == m) {
-                return i - m + 1;
+            if (j == p.length) {
+                return (i - j) + 1;
             }
         }
         return -1;

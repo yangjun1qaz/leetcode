@@ -3,7 +3,7 @@ package com.honey.leetcode.leetcode.editor.cn.stringtest;
 /**
  * @author ：Brayden
  * @date ：Created in 2021/10/29 9:04
- * @description：
+ * @description：题目：28. 实现 strStr() KMP
  * @modified By：
  * @version:
  */
